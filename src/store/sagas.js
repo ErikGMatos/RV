@@ -1,6 +1,6 @@
 
 import { delay } from 'redux-saga';
-import { takeLatest, put, call, select } from 'redux-saga/effects';
+import { takeLatest, put, call, select,all } from 'redux-saga/effects';
 
 function apiGet(text, length) {
   return new Promise((resolve, reject) => {
@@ -26,7 +26,7 @@ function* getTodoList() {
 }
 
 export default function* root() {
-  yield [
+  yield all([
     takeLatest('REQUEST_TODO_LIST', getTodoList),
-  ];
+  ]);
 }
