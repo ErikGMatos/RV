@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import * as TodoActions from './store/actions';
+import * as TodoActions from "./store/actions";
 
 const TodoList = ({ todos, requestTodoList }) => (
   <div>
