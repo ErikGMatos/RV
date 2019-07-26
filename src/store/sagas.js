@@ -22,6 +22,9 @@ function* getTodoList() {
     yield put({ type: 'SUCCESS_TODO_LIST', payload: { data: response } });
   } catch (err) {
     yield put({ type: 'FAILURE_TODO_LIST' });
+
+
+    
   }
 }
 

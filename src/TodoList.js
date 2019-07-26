@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import * as TodoActions from "./store/actions";
+import * as TodoActions from './store/actions';
 
 const TodoList = ({ todos, requestTodoList }) => (
   <div>
@@ -21,7 +21,6 @@ const mapStateToProps = state => ({
   todos: state.todos,
 });
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(TodoActions, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators(TodoActions, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
